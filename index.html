@@ -46,9 +46,9 @@
 				<div class="row ">
 					<div class="col-xs-12">
 						<div class="header-cont clearfix">
-							<a href="index.html" class="logo">
-								<img src="assets/images/logo.png" alt="" />
-								<i class="fa fa-heart"> </i>
+							<a href="index.html" class="logo" id="logo">
+								<!-- <img src="assets/images/logo.png" alt="" />
+								<i class="fa fa-heart"> </i> -->
 							</a>
 							<nav>
 								<button class="home-menu" type="button">
@@ -299,8 +299,7 @@
 											<span class="css-shape">13 de Octubre de 2018</span>
 										</div>
 										<p>
-											"Es la fecha elegida para nos acompañeis en uno de los
-											dias mas importantes de nuestra vida"
+											"Es la fecha elegida para nos acompañeis en uno de los dias mas importantes de nuestra vida"
 										</p>
 									</article>
 								</div>
@@ -343,8 +342,7 @@
 											<img src="assets/images/siquiero.jpg" alt="foto si quiero" />
 										</figure>
 										<p>
-											"Despues de las campanadas, el primer minuto de 2017, 
-											fue testigo del ~SÍ QUIERO~"
+											"Despues de las campanadas, el primer minuto de 2017, fue testigo del ~SÍ QUIERO~"
 										</p>
 									</article>
 								</div>
@@ -993,6 +991,226 @@
 		</footer>
 		<!--Footer Section End-->
 	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+	<script type="text/javascript"> 
+		function svgSupported() {
+			return !!document.createElementNS && !!document.createElementNS("http://www.w3.org/2000/svg", "svg").createSVGRect
+		}
+
+		function mousePointerNormalization(e) {
+			return {
+				x: e.x,
+				y: e.y,
+				fixed: !0,
+				radius: 0
+			}
+		}
+
+		function onMouseMove() {
+			var t = d3.mouse(this)
+			// dataWithTranslates[0] it's the mouse pointer value
+			dataWithTranslates[0].px = t[0] - xMouseModificator
+			dataWithTranslates[0].py = t[1] - yMouseModificator
+			A.resume()
+		}
+
+		function onMouseOut() {
+			// reset mouse position to NOT apply forces whe leaving
+			dataWithTranslates[0].px = dataWithTranslates[0].py = 1e4
+			A.resume()
+		}
+
+
+		if (svgSupported()) {
+
+			var points = [
+				// P
+				[0, 0, 0],
+				[0, 1, 0],
+				[0, 2, 0],
+				[0, 3, 0],
+				[0, 4, 0],
+				[0, 5, 0],
+				[0, 6, 0],
+				[1, 3, 0],
+				[1, 6, 0],
+				[2, 3, 0],
+				[2, 6, 0],
+				[3, 3, 0],
+				[3, 6, 0],
+				[4, 4, 0],
+				[4, 5, 0],
+
+
+				// &
+				[0, 1, 1],
+				[0, 2, 1],
+				[0, 4, 1],
+				[0, 5, 1],
+				[1, 0, 1],
+				[1, 3, 1],
+				[1, 6, 1],
+				[2, 0, 1],
+				[2, 2, 1],
+				[2, 4, 1],
+				[2, 6, 1],
+				[3, 1, 1],
+				[3, 5, 1],
+				[4, 0, 1],
+				[4, 2, 1],
+
+				// J
+				[0, 1, 2],
+				[1, 0, 2],
+				[1, 6, 2],
+				[2, 0, 2],
+				[2, 6, 2],
+				[3, 0, 2],
+				[3, 6, 2],
+				[4, 1, 2],
+				[4, 2, 2],
+				[4, 3, 2],
+				[4, 4, 2],
+				[4, 5, 2],
+				[4, 6, 2]
+
+			]
+
+			var rectSize = 4
+			var yMouseModificator = 7 * rectSize
+			var xMouseModificator = 3 * rectSize
+			var chargePower = -20 * rectSize
+			var paddingX = 20
+			var paddingY = 10
+			var spaceBetweenChars = 2
+			var spaceBetweenPoints = 0
+			var chars = ["<", "/", ">"]
+
+			var data = points.slice()
+			var numberOfPoints = points.length
+			var dataWithTranslates = data.reduce((acc, item) => {
+				if (item[2] === 0) return acc.concat([[...item, 0]])
+				var charNumber = item[2]
+				var lastItem = acc.length > 1 && acc[acc.length - 1]
+				var charNumberLastItem = lastItem && lastItem[2]
+				if (charNumber > charNumberLastItem) {
+					var charPoints = data.filter((i) => i[2] === charNumber - 1)
+					var charXs = charPoints.map((i) => i[0])
+					var maxXs = Math.max(...charXs) + 1
+					maxXs = maxXs + lastItem[3]
+					return acc.concat([[...item, maxXs]])
+				}
+				return acc.concat([[...item, lastItem[3]]])
+			}, [])
+
+			// calculate width
+			var lastItem = dataWithTranslates[dataWithTranslates.length - 1]
+			var lastItemCharNumber = lastItem[2]
+			var lastItemPoints = data
+				.filter((i) => i[2] === lastItemCharNumber)
+				.map((i) => i[0])
+			var maxLastItemX = Math.max(...lastItemPoints) + 1
+			var totalRectsOverX = maxLastItemX + lastItem[3]
+			var totalCharsWithSpaceInTheMiddle = lastItemCharNumber
+			var width = (totalRectsOverX + (totalCharsWithSpaceInTheMiddle * spaceBetweenChars)) * rectSize + paddingX * 2
+
+			// calculate height
+			var Ys = data.map((i) => i[1])
+			var maxLastItemY = Math.max(...Ys) + 1
+			var totalRectsOverY = maxLastItemY
+			var height = totalRectsOverY * rectSize + paddingY * 2
+
+			// translations (paddings + adjustments)    
+			var xTranslate = paddingX
+			var yTranslate = Math.round((totalRectsOverY - 1) * rectSize + paddingY)
+
+			var backgroundData = dataWithTranslates.slice();
+
+			// var svg = d3.select(DOM.svg(width, height));
+			var svg = d3.select("#logo")
+			.append("svg:svg")
+			  .attr("width",width)
+			  .attr("height",height);
+			
+			// background
+			svg
+				.style("background-color", '#FFE3C5')
+				.style("border-radius", "20px")
+				.attr("preserveAspectRatio", "xMinYMin meet")
+				.attr("viewBox", `0 0 ${width} ${height}`)
+
+			// fixed svg
+			var backgroundGroup = svg.append("g")
+				.attr("transform", "translate(" + xTranslate + "," + yTranslate + ")")
+				.selectAll("rect")
+				.data(backgroundData)
+				.enter()
+				.append("rect")
+				.attr("class", (d) => "logo-" + chars[d[2]])
+				.style("fill", (d) => "silver")
+				.attr("x", (d) => {
+					var baseX = d[0] * rectSize
+					var translateX = ((spaceBetweenChars * d[2]) + d[3]) * rectSize
+					return d.x = Math.round(baseX + translateX)
+				})
+				.attr("y", (d) => d.y = Math.round(d[1] * -rectSize))
+				.attr("rx", "50%")
+				.attr("ry", "50%")
+				.attr("width", rectSize - spaceBetweenPoints)
+				.attr("height", rectSize - spaceBetweenPoints);
+
+			// animated svg
+			var w = svg.append("g")
+				.attr("transform", "translate(" + xTranslate + "," + yTranslate + ")");
+
+			var x = w.selectAll("rect")
+				.data(dataWithTranslates)
+				.enter()
+				.append("rect")
+				.attr("class", (d) => "logo-" + chars[d[2]])
+				.style("fill", (d) => d[2] % 2 === 1 ? '#355671' : '#3B9CE4')
+				.attr("x", (d) => {
+					var baseX = d[0] * rectSize
+					var translateX = ((spaceBetweenChars * d[2]) + d[3]) * rectSize
+					return d.x = Math.round(baseX + translateX)
+				})
+				.attr("y", (d) => d.y = Math.round(d[1] * -rectSize))
+				.attr("rx", "50%")
+				.attr("ry", "50%")
+				.attr("width", rectSize - spaceBetweenPoints)
+				.attr("height", rectSize - spaceBetweenPoints);
+
+			// add mouse pointer to data
+			dataWithTranslates.push.apply(dataWithTranslates, dataWithTranslates.map(mousePointerNormalization))
+			dataWithTranslates.unshift(mousePointerNormalization({ x: 1e4, y: 1e4 }))
+
+			// d3 force system
+			var k = d3.range(numberOfPoints).map((e) => ({ source: e + 1, target: e + numberOfPoints + 1 }))
+			var A = d3.layout
+				.force()
+				.gravity(0)
+				.charge((e, t) => t ? 0 : chargePower)
+				.linkDistance(.1)
+				.nodes(dataWithTranslates)
+				.links(k)
+				.start()
+				.on("tick", () => {
+					x
+						.attr("x", (e) => Math.round(e.x))
+						.attr("y", (e) => Math.round(e.y))
+				})
+
+			// event handlers
+			svg
+				.on("mousemove", onMouseMove)
+				.on("touchmove", onMouseMove)
+				.on("mouseout", onMouseOut)
+				.on("touchend", onMouseOut);
+
+			// return svg.node();
+			// document.querySelector('#logo').appendChild(svg.node())
+		}
+	</script>
 	<!--Page Wrapper End-->
 	<script type="text/javascript" src="assets/js/angular.js"></script>
 	<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
