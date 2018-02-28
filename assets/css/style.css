@@ -472,8 +472,8 @@
 	background: #ffffff;
 }
 .wedding-event figure, .wedding-event .event-description {
-	padding-top: 86px;
-	padding-left: 83px;
+	padding-top: 55px;
+	padding-left: 70px;
 }
 .event-description {
 	padding-right: 93px;
@@ -483,13 +483,14 @@
 	background-position: 5px 4px, 99% 4px, 5px 99%, 99% 99%;
 	background-repeat: no-repeat;
 	width: 556px;
-	min-height: 565px;
-	margin-top: 142px;
+	/* min-height: 565px; */
+	margin-top: 108px;
 	border: 2px solid #c5e0dc;
 	background-color: #fff;
 	position: relative;
 	margin-bottom: 71px;
 	z-index: 999;
+	padding-bottom: 32px;
 }
 .event-description-wrapper:before {
 	border-radius: 50px;
@@ -529,6 +530,7 @@
 .venue-class {
 	text-transform: capitalize;
 	padding-bottom: 15px;
+	font-size: 12px;
 }
 .event-description > p {
 	font-family: roboto;
@@ -536,7 +538,7 @@
 	padding-bottom: 30px;
 }
 .map-class {
-	padding-top: 25px;
+	padding-top: 15px;
 	text-transform: capitalize;
 }
 .day-class:before {
@@ -2558,6 +2560,16 @@ html{
 	-webkit-animation-delay: 0.6s;
     animation-delay: 0.6s;
 	}	
+
+.clearFix {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
 @-webkit-keyframes animate {
 50% {
 	-ms-transform: rotate(360deg) scale(0.8); 

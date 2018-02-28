@@ -13,7 +13,8 @@
 	}
 	.event-description {
 		padding-top: 27px !important;
-		padding-right: 10px;
+		padding-right: 40px;
+    	padding-bottom: 40px;
 	}
 	.event-description-wrapper {
 		min-height: 440px;
@@ -799,7 +800,7 @@
 		display: none;
 	}
 	.day-class, .map-class, .clk-class, .venue-class {
-		font-size: 12px;
+		font-size: 14px;
 	}
 	.day-class:before {
 		font-size: 16px;
@@ -828,7 +829,8 @@
 		display: block;
 	}
 	.wedding-event .event-description {
-		padding: 82px 20px 0 38px;
+		padding: 78px 36px 0 38px;
+		margin-bottom: 64px;
 	}
 	#people .img, .quoto {
 		margin-right: 15px;
