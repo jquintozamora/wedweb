@@ -550,6 +550,9 @@
 	.noMobile {
 		display: none;
 	}
+	.css-shape:after {
+		display: none;
+	}
 	#content {
 		padding-top: 63px;
 	}
