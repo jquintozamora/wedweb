@@ -69,7 +69,7 @@
 	text-align:center;
 }
 .happy-couple {
-	padding-top: 100px;
+	padding-top: 0;
 	background: #f9f9f4;
 }
 .header-center {
@@ -193,7 +193,7 @@
 	display: inline-block;
 	position: relative;
 	width: 70%;
-	padding: 25px 0 0;
+	padding: 0;
 }
 .count-down .countdown-section {
 	float: left;
@@ -248,7 +248,7 @@
 }
 .our-success-Story {
 	text-align: center;
-	padding-top: 111px;
+	padding-top: 90px;
 	padding-bottom: 167px;
 	background: #f9f9f4;
 }
@@ -468,7 +468,7 @@
 	background: #f9f9f4;
 }
 .wedding-event-top {
-	padding-top: 97px;
+	padding-top: 80px;
 	background: #ffffff;
 }
 .wedding-event figure, .wedding-event .event-description {
@@ -2337,6 +2337,41 @@ form placeholder {
 .bg-color .right-part > p {
 	line-height: 1.4;
 	margin-bottom: 26px;
+}
+
+.wedshoots {
+	padding-top: 60px;
+}
+
+.webshoots-container {
+	text-align: center;
+	padding-bottom: 45px;
+}
+
+.wedshoots-steps-title {
+	font-weight: bold;
+}
+
+.wedshoots-steps-buttons{
+	padding-top: 10px;
+}
+
+.webshoots-codigo{
+	font-weight: bold;
+	padding-top: 5px;
+}
+
+.webshoots-column {
+	padding: 0 10%;
+	padding-bottom: 30px;
+}
+
+.mobile {
+	display: none;
+}
+
+.map-event-top {
+	padding-top: 60px;
 }
 
 /*======Error page ========*/

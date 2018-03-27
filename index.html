@@ -58,19 +58,30 @@
 								</button>
 								<ul class="navigation clearfix">
 									<li class="active">
-										<a href="#">Inicio</a>
+										<a href="#" data-id="#wrapper">Inicio</a>
 									</li>
+									<!--
 									<li>
 										<a href="#" data-id="#couple">Nosotros</a>
 									</li>
+									-->
 									<li>
 										<a href="#" data-id="#our-story">Nuestra historia</a>
 									</li>
 									<li>
 										<a href="#" data-id="#event">El gran día</a>
 									</li>
+									<!--
 									<li>
 										<a href="#" data-id="#photos">Fotos</a>
+									</li>
+							
+									-->
+									<li>
+										<a href="#" data-id="#map-event">Mapa</a>
+									</li>
+									<li>
+										<a href="#" data-id="#wedshoots">WedShoots</a>
 									</li>
 								</ul>
 							</nav>
@@ -155,45 +166,57 @@
 		<div id="content">
 			<!-- happy couple section start here -->
 			<section class="happy-couple" id="couple">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="header-center">
-								<h2>¡Nos casamos!</h2>
-							</div>
-							<div class="bell">
-								<img src="assets/images/thumb-1.jpg" alt="">
-								<div class="inner-header-wrapper-left inner-header-wrapper">
-									<h3>
-										<a href="#">Pilar</a>
-									</h3>
-									<p>
-										She homero prompta constituam pro. Vim omnis porro eu, iusto deserunt incorrupte sea ad. Aliquam compre hensam definitionem
-										eam ex, ea ius facete nominaviId vim laudem nusquam, mea cu torquatos vituperat ribus, mea tation iisque in. An
-										viris imperdiet mela Causae denique convenire no pri. Diam discere adole cens pri eu, vel dico vidisse disputationi
-										ne. An sea unum iusto quando, id accumsan persecuti ius. Vidisse scaevola ut eam, ne his modo voluptua evertitur.
-									</p>
-									<img src="assets/images/cycle-1.png" alt="">
+				<div class="primary-footer">
+					<div class="container">
+							<div class="headerCenter">
+									<h2>¡Nos casamos!</h2>
 								</div>
-							</div>
-							<div class="jack">
-								<img src="assets/images/thumb-2.jpg" alt="">
-								<div class="inner-header-wrapper-right inner-header-wrapper">
-									<h3>
-										<a href="#">José</a>
-									</h3>
-									<p>
-										He homero prompta constituam pro. Vim omnis porro eu, iusto deserunt incorrupte sea ad. Aliquam compre hensam definitionem
-										eam ex, ea ius facete nominaviId vim laudem nusquam, mea cu torquatos vituperat ribus, mea tation iisque in. An
-										viris imperdiet mela Causae denique convenire no pri. Diam discere adole cens pri eu, vel dico vidisse disputationi
-										ne. An sea unum iusto quando, id accumsan persecuti ius. Vidisse scaevola ut eam, ne his modo voluptua evertitur.
-									</p>
-									<img src="assets/images/cycle-2.png" alt="">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="footer-logo">
+									<figure>
+										<img src="assets/images/footer-img.png" alt="">
+									</figure>
+									<h4>Pilar
+										<span>&amp;</span>José</h4>
+									<span class="oct-class">13 de Octubre de 2018</span>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<!--
+				<div class="bell">
+					<img src="assets/images/thumb-1.jpg" alt="">
+					<div class="inner-header-wrapper-left inner-header-wrapper">
+						<h3>
+							<a href="#">Pilar</a>
+						</h3>
+						<p>
+							She homero prompta constituam pro. Vim omnis porro eu, iusto deserunt incorrupte sea ad. Aliquam compre hensam definitionem
+							eam ex, ea ius facete nominaviId vim laudem nusquam, mea cu torquatos vituperat ribus, mea tation iisque in. An
+							viris imperdiet mela Causae denique convenire no pri. Diam discere adole cens pri eu, vel dico vidisse disputationi
+							ne. An sea unum iusto quando, id accumsan persecuti ius. Vidisse scaevola ut eam, ne his modo voluptua evertitur.
+						</p>
+						<img src="assets/images/cycle-1.png" alt="">
+					</div>
+				</div>
+				<div class="jack">
+					<img src="assets/images/thumb-2.jpg" alt="">
+					<div class="inner-header-wrapper-right inner-header-wrapper">
+						<h3>
+							<a href="#">José</a>
+						</h3>
+						<p>
+							He homero prompta constituam pro. Vim omnis porro eu, iusto deserunt incorrupte sea ad. Aliquam compre hensam definitionem
+							eam ex, ea ius facete nominaviId vim laudem nusquam, mea cu torquatos vituperat ribus, mea tation iisque in. An
+							viris imperdiet mela Causae denique convenire no pri. Diam discere adole cens pri eu, vel dico vidisse disputationi
+							ne. An sea unum iusto quando, id accumsan persecuti ius. Vidisse scaevola ut eam, ne his modo voluptua evertitur.
+						</p>
+						<img src="assets/images/cycle-2.png" alt="">
+					</div>
+				</div>
+				-->
 			</section>
 			<!--happy couple section end here -->
 
@@ -231,6 +254,7 @@
 			<!--Count-down section end here -->
 
 			<!--Our-stroy section start here -->
+			<!--
 			<div class="our-story">
 				<div class="container">
 					<div class="row">
@@ -243,10 +267,11 @@
 					</div>
 				</div>
 			</div>
+			-->
 			<!--Our-stroy end here -->
 
 			<!--Our-success-story section start here -->
-			<section class="our-success-Story" id="our-story">
+			<section class="our-success-Story noMobile" id="our-story">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
@@ -353,6 +378,100 @@
 					</div>
 				</div>
 			</section>
+			<section class="our-success-Story mobile" id="our-story">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="header-center">
+									<h2>Nuestra historia</h2>
+								</div>
+								<div class="timeline-scale"></div>
+								<div class="left-right-wrapper clearfix">
+									<span class="time-line-divider"> </span>
+									<div class="left-section-content">
+										<article class="met-section">
+											<h3>
+												<a href="#">Nos conocimos</a>
+											</h3>
+											<div class="arrow-cls">
+												<span class="css-shape">24 de Abril de 2015</span>
+											</div>
+											<p>
+												"Despues de un año y medio en Málaga, mi ultima noche te conocí, desde el primer momento supe que ibas a ser muy importante
+												en mi vida"
+												<span class="italic"> — dijo él.</span>
+											</p>
+										</article>
+										<article class="met-section met-section-right">
+												<h3>
+													<a href="#">Nuestra primera cita</a>
+												</h3>
+												<div class="arrow-cls right-arrow-cls">
+													<span class="css-shape">30 de Abril de 2015</span>
+												</div>
+												<figure>
+													<img src="assets/images/alhambra.jpg" alt="foto alhambra" />
+												</figure>
+												<p>
+													"Tenía que comprobar que no habia sido un sueño y compartir contigo un paseo por el Albaicín, teniendo a la Alhambra por
+													testigo"
+													<span class="italic"> — dijo ella.</span>
+												</p>
+										</article>
+										<article class="met-section">
+											<h3>
+												<a href="#">Comenzó nuestra vida juntos</a>
+											</h3>
+											<div class="arrow-cls">
+												<span class="css-shape">18 de Octubre de 2015</span>
+											</div>
+											<!-- <figure>
+												<img src="assets/images/vivirLondres2.jpg" alt="">
+											</figure> -->
+											<ul class="clearfix" style="text-align: center;">
+												<li>
+													<img src="assets/images/vivirLondres2.jpg" alt="">
+												</li>
+												<li>
+													<img src="assets/images/vivirLondres.jpg" alt="">
+												</li>
+											</ul>
+											<p>
+												"Lejos de nuestra familia y amigos, nos convertimos en todo el uno para el otro"
+												<span class="italic"> — dijeron éllos.</span>
+											</p>
+										</article>
+										<article class="met-section met-section-right">
+												<h3>
+													<a href="#">¡Y dijo sí quiero!</a>
+												</h3>
+												<div class="arrow-cls right-arrow-cls">
+													<span class="css-shape">1 de Enero de 2017</span>
+												</div>
+												<figure>
+													<img src="assets/images/siquiero.jpg" alt="foto si quiero" />
+												</figure>
+												<p>
+													"Despues de las campanadas, el primer minuto de 2017, fue testigo del ~SÍ QUIERO~"
+												</p>
+											</article>
+										<article class="met-section">
+											<h3>
+												<a href="#">¡Nos casamos!</a>
+											</h3>
+											<div class="arrow-cls">
+												<span class="css-shape">13 de Octubre de 2018</span>
+											</div>
+											<p>
+												"Es la fecha elegida para nos acompañeis en uno de los dias mas importantes de nuestra vida"
+											</p>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			<!--Our-success-story end here -->
 
 			<!--wedding-event section start here -->
@@ -397,8 +516,13 @@
 						</div>
 					</div>
 					<div class="row padding-right">
-						<div class="col-xs-12 col-md-5 col-sm-5 push">
-							<div class="event-description-wrapper reception-description-sec wrapperCocktail">
+						<div class="col-xs-12 col-md-7 col-sm-7 ">
+							<figure class="figureCocktail">
+								<img src="assets/images/cocktail.jpg" alt="cocktail">
+							</figure>
+						</div>
+						<div class="col-xs-12 col-md-pull-1 col-md-5 col-sm-pull-2 col-sm-5">
+							<div class="event-description-wrapper wrapperCocktail">
 								<div class="event-description">
 									<h3>
 										<a href="#">Cocktail</a>
@@ -414,11 +538,6 @@
 									</address>
 								</div>
 							</div>
-						</div>
-						<div class="col-xs-12 col-md-7 col-sm-7 ">
-							<figure class="figureCocktail">
-								<img src="assets/images/cocktail.jpg" alt="cocktail">
-							</figure>
 						</div>
 					</div>
 					<div class="row padding-right">
@@ -449,10 +568,22 @@
 						</div>
 					</div>
 				</div>
-				<div>
-					<h3 style="text-align: center; margin-top: 20px;">
-						Mapa del Hotel Covento La Magdalena
-					</h3>
+
+				
+			</section>
+			<!--wedding-event section end here -->
+
+			<sectionclass="map-event" id="map-event">
+				<div class="map-event-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="header-center">
+									<h2>Mapa del Hotel</h2>
+								</div>
+							</div>
+						</div>
+					</div>
 					<iframe 
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17849.2091568924!2d-4.6044808728548725!3d37.013422056453656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd728fde3aa69e35%3A0x61f3a6200377e3d6!2sHotel+Convento+La+Magdalena!5e0!3m2!1sen!2suk!4v1519852247993" 
 						width="100%" 
@@ -462,10 +593,7 @@
 						allowfullscreen
 					></iframe>
 				</div>
-				
 			</section>
-			<!--wedding-event section end here -->
-
 			<!--image-section start here -->
 			<!--
 			<section class="important-people" id="people-blog">
@@ -757,43 +885,56 @@
 			-->
 			<!--friend-wishes section end here -->
 
-			<div class="touch">
-				<h3>Descargate la app de las fotos de la boda</h3>
-				<div class="pure-g mt20">
-                    <div class="pure-u-1-3">
-                        <div class="wedshoots-steps-item">
-                            <img src="https://cdn1.bodas.net/assets/img/tools/wedshoots/step1.png" srcset="https://cdn1.bodas.net/assets/img/tools/wedshoots/step1.png 1x, https://cdn1.bodas.net/assets/img/tools/wedshoots/step1@2x.png 2x" alt="Wedshoots">
-                            <p class="wedshoots-steps-title">Instala la aplicación</p>
-                            <p class="wedshoots-steps-description">Descárgate la aplicación de WedShoots en <a href="https://www.wedshoots.com" class="nounder red">www.wedshoots.com</a> o en la tienda de tu teléfono Android o iPhone.</p>
-                            <div class="wedshoots-steps-buttons">
-                                <a rel="nofollow" class="wedshoots-steps-button apple" href="https://app.appsflyer.com/id660256196?pid=WP-iOS-ES&amp;c=WP-ES-LANDINGS&amp;s=es">
-                                    <img src="https://cdn1.bodas.net/assets/img/footer/appstore_es.png" srcset="https://cdn1.bodas.net/assets/img/footer/appstore_es.png 1x,
-                                     https://cdn1.bodas.net/assets/img/footer/appstore_es@2x.png 2x">
-                                </a>
-                                <a rel="nofollow" class="wedshoots-steps-button android" href="https://app.appsflyer.com/net.bodas.android.wedshoots?pid=WP-Android-ES&amp;c=WP-ES-LANDINGS">
-                                    <img src="https://cdn1.bodas.net/assets/img/footer/googleplay_es.png" srcset="https://cdn1.bodas.net/assets/img/footer/googleplay_es.png 1x,
-                                     https://cdn1.bodas.net/assets/img/footer/googleplay_es@2x.png 2x">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pure-u-1-3">
-                        <div class="wedshoots-steps-item">
-                            <img src="https://www.bodas.net/qr.php?d=ES0caa08a5&amp;e=Q&amp;t=J&amp;size=120" width="120" height="120">                            <p class="wedshoots-steps-title">Accede a tu álbum</p>
-                            <p class="wedshoots-steps-description">Abre WedShoots en tu móvil, pon tu nombre e introduce el código del álbum o escanea el código QR.</p>
-                            <p>Código del álbum: <span class="block strong">ES0caa08a5</span></p>
-                        </div>
-                    </div>
-
-                    <div class="pure-u-1-3">
-                        <div class="wedshoots-steps-item">
-                            <img src="https://cdn1.bodas.net/assets/img/tools/wedshoots/step3.png" srcset="https://cdn1.bodas.net/assets/img/tools/wedshoots/step3.png 1x, https://cdn1.bodas.net/assets/img/tools/wedshoots/step3@2x.png 2x" alt="Wedshoots">
-                            <p class="wedshoots-steps-title">Díselo a tus invitados</p>
-                            <p class="wedshoots-steps-description">Todos los invitados que se descarguen la app podrán publicar fotos en vuestro álbum, creando un recuerdo único para vosotros.</p>
-                            <a class="mw-sans-regular" target="_blank" href="/album-InvitacionShow.php?idAlbum=54424">Descarga tus tarjetas de invitación</a>
-                        </div>
-                    </div>
+			<div id="wedshoots" class="wedshoots">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="header-center">
+								<h2>WebShoots</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="webshoots-container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 webshoots-column">
+							<div class="wedshoots-steps-item">
+								<img src="https://cdn1.bodas.net/assets/img/tools/wedshoots/step1.png" srcset="https://cdn1.bodas.net/assets/img/tools/wedshoots/step1.png 1x, https://cdn1.bodas.net/assets/img/tools/wedshoots/step1@2x.png 2x" alt="Wedshoots">
+								<p class="wedshoots-steps-title">Instala la aplicación</p>
+								<p class="wedshoots-steps-description">
+									Descárgate la aplicación de WedShoots 
+									en la tienda de tu teléfono Android o iPhone.</p>
+								<div class="wedshoots-steps-buttons">
+									<a rel="nofollow" class="wedshoots-steps-button apple" href="https://app.appsflyer.com/id660256196?pid=WP-iOS-ES&amp;c=WP-ES-LANDINGS&amp;s=es">
+										<img src="https://cdn1.bodas.net/assets/img/footer/appstore_es.png" srcset="https://cdn1.bodas.net/assets/img/footer/appstore_es.png 1x,
+											https://cdn1.bodas.net/assets/img/footer/appstore_es@2x.png 2x">
+									</a>
+									<a rel="nofollow" class="wedshoots-steps-button android" href="https://app.appsflyer.com/net.bodas.android.wedshoots?pid=WP-Android-ES&amp;c=WP-ES-LANDINGS">
+										<img src="https://cdn1.bodas.net/assets/img/footer/googleplay_es.png" srcset="https://cdn1.bodas.net/assets/img/footer/googleplay_es.png 1x,
+											https://cdn1.bodas.net/assets/img/footer/googleplay_es@2x.png 2x">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 webshoots-column">
+							<div class="wedshoots-steps-item">
+								<img src="https://www.bodas.net/qr.php?d=ES0caa08a5&amp;e=Q&amp;t=J&amp;size=120" width="120" height="120">                            
+								<p class="wedshoots-steps-title">Accede a tu álbum</p>
+								<p class="wedshoots-steps-description">Abre WedShoots en tu móvil, pon tu nombre e introduce el código del álbum o escanea el código QR.</p>
+								<p>Código del álbum: <div class="webshoots-codigo">ES0caa08a5</div></p>
+							</div>
+						</div>
+						<!--
+						<div class="pure-u-1-3">
+							<div class="wedshoots-steps-item">
+								<img src="https://cdn1.bodas.net/assets/img/tools/wedshoots/step3.png" srcset="https://cdn1.bodas.net/assets/img/tools/wedshoots/step3.png 1x, https://cdn1.bodas.net/assets/img/tools/wedshoots/step3@2x.png 2x" alt="Wedshoots">
+								<p class="wedshoots-steps-title">Díselo a tus invitados</p>
+								<p class="wedshoots-steps-description">Todos los invitados que se descarguen la app podrán publicar fotos en vuestro álbum, creando un recuerdo único para vosotros.</p>
+								<a class="mw-sans-regular" target="_blank" href="/album-InvitacionShow.php?idAlbum=54424">Descarga tus tarjetas de invitación</a>
+							</div>
+						</div>
+						-->
+					</div>
 				</div>
 			</div>
 
@@ -810,6 +951,7 @@
 			<!--Get-intouch section end -->
 
 			<!--wedding-gift-section start-->
+			<!--
 			<section class="gallery-part" id="photos">
 				<div class="header-center">
 					<h2>Fotos</h2>
@@ -871,6 +1013,7 @@
 					</button>
 				</div>
 			</section>
+			-->
 			<!--wedding-gift section end -->
 
 			<!--wedding-gift section start-->
@@ -945,6 +1088,7 @@
 			<!--wedding-gift-section end-->
 
 			<!--Attending-section-start-->
+			<!-- 
 			<section class="attending-class">
 				<div class="container">
 					<div class="row">
@@ -1015,12 +1159,14 @@
 					</div>
 				</div>
 			</section>
+			-->
 			<!--Attending-section-end-->
 		</div>
 		<!--Content Area End-->
 
 		<!--Footer Section start-->
 		<footer id="footer">
+			<!--
 			<div class="primary-footer">
 				<div class="container">
 					<div class="row">
@@ -1037,6 +1183,7 @@
 					</div>
 				</div>
 			</div>
+			-->
 			<div class="main-footer">
 				<div class="container">
 					<div class="row">

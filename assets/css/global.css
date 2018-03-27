@@ -660,13 +660,19 @@ button {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+#content {
+  padding-top: 64px;
+  padding-bottom: 15px;
+}
+
 /*
  4.) Header Styles
  ------------------------------*/
 /*==== Header one======*/
 .header {
-  background: rgba(255, 255, 255, 0.7);
-  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
   width: 100%;
   left: 0;
   top: 0;
@@ -674,8 +680,12 @@ button {
   right: 0;
 }
 
+.headerCenter > h2 {
+  color: rgba(255, 255, 255, 0.6)
+}
+
 .header-cont {
-  padding-top: 24px;
+  padding-top: 6px;
   padding-bottom: 0px;
 }
 
@@ -729,7 +739,8 @@ nav .icon-bar {
 .navigation > li {
   float: left;
   position: relative;
-  padding: 0 15px 34px;
+  padding: 3px 14px 20px;
+  
 }
 
 .navigation li a {

@@ -17,7 +17,7 @@
     	padding-bottom: 40px;
 	}
 	.event-description-wrapper {
-		min-height: 440px;
+		/* min-height: 440px; */
 		width: 450px;
 	}
 	.left-section-content, .right-section-content {
@@ -190,7 +190,7 @@
 		width: 652px;
 	}
 	.happy-couple {
-		padding-top: 50px;
+		padding-top: 0px;
 	}
 	.bell:before {
 		left: 94.5%;
@@ -249,7 +249,7 @@
 		width: 33.33%;
 	}
 	.event-description-wrapper {
-		min-height: 497px;
+		/* min-height: 497px; */
 		margin-top: 143px;
 		width: 408px;
 	}
@@ -544,6 +544,15 @@
  3.) Media Query for mobile
  ===============================*/
 @media only screen and (max-width: 767px) {
+	.mobile {
+		display: block;
+	}
+	.noMobile {
+		display: none;
+	}
+	#content {
+		padding-top: 63px;
+	}
 	nav {
 		width: 100%;
 		margin-top: 0;
@@ -553,7 +562,7 @@
 		float: none;
 		left: 0;
 		position: absolute;
-		top: 69px;
+		top: 63px;
 		z-index: 99999;
 		background: #f3dbbd;
 		display: none;
@@ -628,8 +637,11 @@
 		left: 0;
 		right: auto;
 	}
-	.happy-couple, .our-story, .Our-success-Story, .wedding-event, .important-people, .friend-wishes, .touch, .wedding-section-gift, .wedding-gift, .wedding-event-top {
+	.our-story, .Our-success-Story, .wedding-event, .important-people, .friend-wishes, .touch, .wedding-section-gift, .wedding-gift, .wedding-event-top {
 		padding-top: 40px;
+	}
+	.happy-couple {
+		padding-top: 0;
 	}
 	.our-story, .img-section, .friend-wishes, .wedding-section-gift {
 		padding-bottom: 40px;
@@ -793,7 +805,7 @@
 	.event-description-wrapper {
 		margin-top: 30px;
 		width: 100%;
-		min-height: 488px;
+		/* min-height: 488px; */
 		margin-bottom: 25px;
 	}
 	.event-description-wrapper:before {
@@ -927,11 +939,12 @@
 		padding-right: 0px;
 	}
 	.header-cont {
-		padding: 12px 0px 13px;
+		padding: 5px 0px 6px;
+		
 	}
 	.home-menu {
 		display: block;
-		top: 17px;
+		top: 14px;
 		right: 16px;
 	}
 	/*================================home-agency===============================================*/
