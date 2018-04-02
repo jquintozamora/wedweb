@@ -548,7 +548,7 @@
 		display: block;
 	}
 	.noMobile {
-		display: none;
+		display: none !important;
 	}
 	.css-shape:after {
 		display: none;
@@ -705,7 +705,7 @@
 		margin-bottom: 15px !important;
 	}
 	.our-success-Story {
-		padding-top: 25px;
+		padding-top: 80px;
 		padding-bottom: 0;
 	}
 	.our-story p {

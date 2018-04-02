@@ -69,6 +69,7 @@ $(function() {
 	$('.navigation li').on('click', function() {
 		if ($(window).width() < 768) {
 			$(this).children('.drop-down').slideToggle();
+			$(".navigation").toggle();
 		}
 	});
 
